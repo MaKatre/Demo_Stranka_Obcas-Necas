@@ -1,0 +1,378 @@
+.issue-archive {
+    max-width: 1200px;
+    min-height: 60vh;
+    margin: 0 auto;
+    padding: 55px 28px 80px;
+    color: var(--text);
+}
+
+/* Page introduction */
+
+.archive-heading {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.archive-eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.archive-heading h1 {
+    margin-bottom: 18px;
+    color: var(--dark);
+    font-size: clamp(36px, 5vw, 54px);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.archive-heading > p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.archive-article-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+    padding: 17px 20px;
+    background: #faeaea;
+    border-left: 3px solid var(--primary);
+    font-size: 13px;
+}
+
+.archive-article-link span {
+    color: var(--dark);
+}
+
+.archive-article-link a {
+    color: var(--primary);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.archive-article-link a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Year sections */
+
+.issue-year {
+    margin-top: 55px;
+}
+
+.year-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.year-heading h2 {
+    position: relative;
+    margin: 0;
+    padding-bottom: 5px;
+    color: var(--dark);
+    font-size: 31px;
+    font-weight: 900;
+    letter-spacing: -0.8px;
+}
+
+.year-heading h2::after {
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    width: 48px;
+    height: 4px;
+    background: var(--primary);
+    content: "";
+}
+
+.year-heading > span {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Issue grid */
+
+.issue-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.issue-card {
+    min-width: 0;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 3%);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.issue-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgb(0 0 0 / 8%);
+}
+
+.issue-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Magazine cover */
+
+.issue-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    padding: 22px;
+    overflow: hidden;
+    background: #f3f3f3;
+}
+
+.issue-cover img {
+    display: block;
+    width: 100%;
+    height: 290px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.issue-card:hover .issue-cover img {
+    transform: scale(1.025);
+}
+
+/* Issue information */
+
+.issue-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+    padding: 21px;
+    border-top: 1px solid #eeeeee;
+}
+
+.issue-label {
+    margin-bottom: 10px;
+    color: var(--primary);
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.issue-info h3 {
+    margin-bottom: 5px;
+    color: var(--dark);
+    font-size: 19px;
+    font-weight: 900;
+}
+
+.issue-info p {
+    margin-bottom: 20px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.issue-action {
+    margin-top: auto;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.issue-card:hover .issue-action {
+    color: var(--primary-dark);
+}
+
+/* Pagination */
+
+.archive-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 65px;
+}
+
+.pagination-number,
+.pagination-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 42px;
+    height: 42px;
+    padding: 0 12px;
+    color: var(--dark);
+    background: var(--white);
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.pagination-number:hover,
+.pagination-arrow:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.pagination-number.active {
+    color: var(--white);
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.pagination-dots {
+    padding: 0 5px;
+    color: var(--muted);
+}
+
+/* Keyboard accessibility */
+
+.issue-archive a:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 4px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 850px) {
+    .issue-archive {
+        padding: 40px 22px 60px;
+    }
+
+    .issue-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .issue-cover {
+        min-height: 250px;
+    }
+
+    .issue-cover img {
+        height: 260px;
+    }
+}
+
+@media (max-width: 550px) {
+    .issue-archive {
+        padding: 32px 17px 45px;
+    }
+
+    .archive-heading {
+        margin-bottom: 42px;
+    }
+
+    .archive-heading h1 {
+        font-size: 36px;
+    }
+
+    .archive-heading > p {
+        font-size: 14px;
+    }
+
+    .archive-article-link {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 15px;
+        line-height: 1.7;
+    }
+
+    .issue-year {
+        margin-top: 42px;
+    }
+
+    .year-heading h2 {
+        font-size: 27px;
+    }
+
+    .issue-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+    }
+
+    .issue-cover {
+        min-height: 160px;
+        padding: 10px;
+    }
+
+    .issue-cover img {
+        height: 180px;
+    }
+
+    .issue-info {
+        padding: 13px;
+    }
+
+    .issue-label {
+        font-size: 8px;
+        letter-spacing: 0.5px;
+    }
+
+    .issue-info h3 {
+        font-size: 16px;
+    }
+
+    .issue-info p {
+        font-size: 12px;
+    }
+
+    .archive-pagination {
+        gap: 6px;
+        margin-top: 45px;
+    }
+
+    .pagination-number,
+    .pagination-arrow {
+        min-width: 36px;
+        height: 38px;
+        padding: 0 9px;
+    }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    .issue-card,
+    .issue-cover img,
+    .pagination-number,
+    .pagination-arrow {
+        transition: none;
+    }
+
+    .issue-card:hover,
+    .issue-card:hover .issue-cover img {
+        transform: none;
+    }
+}

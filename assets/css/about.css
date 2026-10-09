@@ -1,0 +1,256 @@
+.about-page {
+    background-color: var(--light);
+}
+
+
+.about-hero {
+    padding: 65px 24px 45px;
+    text-align: center;
+    background-color: var(--white);
+    border-bottom: 1px solid #eeeeee;
+}
+
+.about-hero h1 {
+    margin-bottom: 18px;
+    color: var(--dark);
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.about-hero > p {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.about-image {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    max-height: 420px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 65px 24px;
+}
+
+.article-text h2 {
+    margin-bottom: 25px;
+    color: var(--dark);
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.article-text p {
+    margin-bottom: 22px;
+    color: #444444;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+.contact-section,
+.awards-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 24px 75px;
+}
+
+.section-title {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.section-title h2 {
+    margin-bottom: 12px;
+    color: var(--dark);
+    font-size: clamp(30px, 4vw, 42px);
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.section-title > p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/*Kontakty*/
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.info-card {
+    padding: 28px;
+    background-color: var(--white);
+    border: 1px solid #e8e8e8;
+    border-top: 4px solid var(--primary);
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgb(0 0 0 / 3%);
+}
+
+.info-card h3 {
+    margin-bottom: 17px;
+    color: var(--dark);
+    font-size: 19px;
+}
+
+.info-card p,
+.info-card address {
+    margin-bottom: 10px;
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+.info-card address {
+    font-style: normal;
+}
+
+.info-card a {
+    color: var(--primary);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.info-card a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Awards */
+
+.awards-section {
+    max-width: 1200px;
+    padding-top: 35px;
+}
+
+.awards-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.award-card {
+    padding: 25px;
+    background-color: var(--white);
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgb(0 0 0 / 3%);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.award-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgb(0 0 0 / 7%);
+}
+
+.award-card h3 {
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+    color: var(--primary);
+    font-size: 23px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.award-card ul {
+    padding-left: 20px;
+}
+
+.award-card li {
+    margin-bottom: 10px;
+    color: #444444;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.award-card li::marker {
+    color: var(--primary);
+}
+
+
+
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .awards-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-content {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-hero {
+        padding: 40px 18px 30px;
+    }
+
+    .about-hero > p {
+        font-size: 15px;
+    }
+
+    .about-image {
+        max-height: 260px;
+    }
+
+    .about-content {
+        padding: 40px 20px;
+    }
+
+    .article-text h2 {
+        font-size: 25px;
+    }
+
+    .article-text p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .contact-section,
+    .awards-section {
+        padding: 35px 18px 50px;
+    }
+
+    .contact-grid,
+    .awards-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .info-card,
+    .award-card {
+        padding: 22px;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .award-card {
+        transition: none;
+    }
+
+    .award-card:hover {
+        transform: none;
+    }
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partneri</title>
+    <link rel="stylesheet" href="../assets/css/navigation.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/partners.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo-container">
+            <a href="../index.html" class="logo" aria-label="Domovská stránka">
+                <img  src="../assets/img/logo_link.jpg"/>
+            </a>
+        </div>
+
+        <nav class="main-navigation" aria-label="Hlavná navigácia">
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Otvoriť navigáciu"
+                aria-expanded="false"
+                aria-controls="navigation-links">
+                ☰
+            </button>
+
+            <ul class="navigation-links" id="navigation-links">
+                <li>
+                    <a href="vyber_clankov.html">UKF LIFE</a>
+                </li>
+                <li>
+                    <a href="vyber_clankov.html">ZO ŠKOLSTVA</a>
+                </li>
+                <li>
+                    <a href="vyber_clankov.html">ŠPORT</a>
+                </li>
+                <li>
+                    <a href="vyber_clankov.html">MEDZI RIADKAMI</a>
+                </li>
+                <li>
+                    <a href="vyber_clankov.html">ON PREDSTAVUJE</a>
+                </li>
+                <li>
+                    <a href="vyber_clankov.html">RANDE S NITROU</a>
+                </li>
+                <li>
+                    <a href="vyber_clankov.html">KULTÚRA A UMENIE</a>
+                </li>
+                <li>
+                    <a href="vyber_clankov.html">EKO</a>
+                </li>
+                <li>
+                    <a href="vyber_clankov.html">ABY DUŠE ROZKVITLI</a>
+                </li>
+                <li>
+                    <a href="vyber_clankov.html">KOMENTÁRE A NÁZORY</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="partners-page">
+
+    <section class="partners-section">
+        <div class="section-heading">
+            <span class="eyebrow">SPOLUPRACUJEME</span>
+            <h1>Naši partneri</h1>
+            <p>
+                Ďakujeme našim partnerom za podporu,
+                spoluprácu a pomoc pri tvorbe nášho časopisu.
+            </p>
+        </div>
+
+        <div class="partners-grid">
+
+            <a class="partner-card" href="https://www.ukf.sk/"
+               target="_blank" rel="noopener noreferrer">
+                <img src="../assets/img/ukf.jpg" alt="Univerzita Konštantína Filozofa">
+            </a>
+
+            <a class="partner-card" href="https://www.ukf.sk/"
+               target="_blank" rel="noopener noreferrer">
+                <img src="../assets/img/sp_ukf.jpg" alt="Študentský parlament UKF">
+            </a>
+
+            <a class="partner-card" href="https://www.ukf.sk/"
+               target="_blank" rel="noopener noreferrer">
+                <img src="../assets/img/divadlo.jpg" alt="Divadlo">
+            </a>
+
+            <a class="partner-card" href="https://www.ukf.sk/"
+               target="_blank" rel="noopener noreferrer">
+                <img src="../assets/img/logo_sdks.jpg" alt="Partner SDKS">
+            </a>
+
+            <a class="partner-card" href="https://www.ukf.sk/"
+               target="_blank" rel="noopener noreferrer">
+                <img src="../assets/img/logo_garmondnitra.jpg" alt="Garmond Nitra">
+            </a>
+
+            <a class="partner-card" href="https://www.ukf.sk/"
+               target="_blank" rel="noopener noreferrer">
+                <img src="../assets/img/logo-ng.jpg" alt="Partner NG">
+            </a>
+
+            <a class="partner-card" href="https://www.ukf.sk/"
+               target="_blank" rel="noopener noreferrer">
+                <img src="../assets/img/Mestival_Nitra_logo.png" alt="Mestival Nitra">
+            </a>
+
+            <a class="partner-card" href="https://www.ukf.sk/"
+               target="_blank" rel="noopener noreferrer">
+                <img src="../assets/img/AIESEC_logo.jpg" alt="AIESEC">
+            </a>
+
+        </div>
+    </section>
+
+</main>
+
+    <footer class="site-footer">
+    <div class="footer-content">
+
+        <nav aria-label="Navigácia v pätičke">
+            <ul class="footer-links">
+                <li><a href="o_casopise.html">O ČASOPISE</a></li>
+                <li><a href="redakcia.html">REDAKCIA</a></li>
+                <li><a href="partneri.html">PARTNERI</a></li>
+                <li><a href="archiv.html">ARCHÍV</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer-social">
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://www.instagram.com/">Instagram</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            Táto stránka funguje ako vizuálne demo.
+            Textový alebo obrázkový obsah patrí ich
+            originálnym tvorcom a/alebo vlastníkom.
+        </p>
+    </div>
+</footer>
+
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navigationLinks = document.querySelector(".navigation-links");
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = navigationLinks.classList.toggle("is-open");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Zatvoriť navigáciu" : "Otvoriť navigáciu"
+            );
+
+            menuToggle.textContent = isOpen ? "✕" : "☰";
+        });
+    </script>
+</body>
+</html>
